@@ -7,14 +7,15 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Poppins:wght@300;500;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Generator</title>
+    <title>AI Story Generator</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Placeholder</h1>
+        <h1>AI Story Generator</h1>
       </header>
 
       <main>
@@ -22,7 +23,7 @@
           <form action="" id="generate-form">
             <input
               type="text"
-              placeholder="Placeholder"
+              placeholder="Enter some keywords to define your short story"
               autofocus
               required
               autocomplete="off"
@@ -31,7 +32,9 @@
             />
             <input type="submit" class="submit-button" />
           </form>
-          <div class="hint">i.e. <em>placeholder...</em></div>
+          <div class="hint">
+            i.e. <em>Time-travel, cat, fantasy, witch.</em>
+          </div>
           <div class="generated-response" id="generated-response"></div>
         </div>
       </main>
