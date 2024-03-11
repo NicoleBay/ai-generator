@@ -1,27 +1,29 @@
 :root {
-  --title-font: "Cinzel", serif;
-  --body-font: "Poppins", sans-serif;
-  --bg-color: #fde9df;
+  --title-font: "Playfair Display", serif;
+  --body-font: "Roboto", sans-serif;
+  --bg-color: #f7f7f7;
   --primary-color: #393e46;
-  --secondary-color: #ea8a8a;
-}
-
-.container {
-  display: block;
-  margin: 60px auto;
-  max-width: 700px;
-  padding: 60px 60px;
+  --secondary-color: #acc6aa;
 }
 
 body {
   background-color: var(--bg-color);
   font-family: var(--body-font);
+  background-image: linear-gradient(
+      rgb(245, 244, 232, 0.5),
+      rgb(245, 244, 232, 0.5)
+    ),
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/118/614/original/pexels-lukas-349610.jpg?1710174876);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
   font-family: var(--title-font);
   color: var(--primary-color);
-  font-size: 36px;
+  font-size: 55px;
   line-height: 1.5;
   text-align: center;
 }
@@ -33,7 +35,7 @@ form {
 
 footer {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 a {
@@ -41,8 +43,21 @@ a {
   font-weight: 600;
 }
 
+.container {
+  display: block;
+  margin: 60px auto;
+  max-width: 700px;
+  padding: 60px 60px;
+}
+
+.form-generation {
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+}
+
 .intruction {
-  font-size: 13px;
+  font-size: 18px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -52,7 +67,7 @@ a {
 }
 
 .search-field {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   padding: 16px;
   border: 1px solid var(--secondary-color);
   width: 80%;
@@ -63,6 +78,7 @@ a {
 
 .submit-button {
   margin-left: 10px;
+  font-weight: 700;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border: none;
@@ -73,7 +89,7 @@ a {
 }
 
 .hint {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--primary-color);
   opacity: 0.8;
 }
@@ -81,10 +97,10 @@ a {
 .generated-response {
   margin: 30px auto;
   font-size: 16px;
-  background-color: #ffffff;
   padding: 10px;
   line-height: 1.5;
   border-left: 3px solid var(--secondary-color);
+  background-color: var(--bg-color);
 }
 
 .hidden {
