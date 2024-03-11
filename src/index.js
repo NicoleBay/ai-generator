@@ -21,7 +21,8 @@ function generateForm(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let responseElement = document.querySelector("#generated-response");
-  responseElement.innerHTML = "🤖 Generating your recipe, please wait...";
+  responseElement.classList.remove("hidden");
+  responseElement.innerHTML = `<div class="generating">⏳ Generating your recipe using ${fieldInput.value}, please wait...</div>`;
 
   axios.get(apiUrl).then(displayResponse);
 }

@@ -75,6 +75,7 @@ a {
 .hint {
   font-size: 13px;
   color: var(--primary-color);
+  opacity: 0.8;
 }
 
 .generated-response {
@@ -84,4 +85,23 @@ a {
   padding: 10px;
   line-height: 1.5;
   border-left: 3px solid var(--secondary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
