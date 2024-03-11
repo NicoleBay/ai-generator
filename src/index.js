@@ -16,13 +16,12 @@ function generateForm(event) {
   let fieldInput = document.querySelector("#search-field");
   let apiKey = "b13b374bef64oac0e068e7t94aa7beef";
   let context =
-    "You are an AI Assistant with lots of imagination and creativity for story telling. You love to create exciting stories, with the main character either being a hero or villian. You love to create beautiful settings, include fastinating small details, and add interesting side characters. Write a description, in basic HTML format, of a new story, the story can be any genre. Make the story concise and relevant to the defined keywords. Don't start the story with 'once upon a time', don't end the story on 'the end', and don't include images.";
-  let prompt = `Generate a new short story that is based on the defined input ${fieldInput.value}`;
+    "You are a highly skilled chef that is celebrated for crafting easy and healthy recipes with the ingredients given by the user instruction. Provide the answer in basic HTML. Include a note at the end of the recipe to offer suggestions on how to savor this dish to the fullest, including ideal pairings or potential variations. Sign the recipe with `AI Chef` inside a <strong> element at the end of the recipe, keep this alinged to the centre.";
+  let prompt = `User instructions: Create an easy recipe with ${fieldInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let responseElement = document.querySelector("#generated-response");
-  responseElement.innerHTML =
-    "Generating a short story for you, please wait...";
+  responseElement.innerHTML = "🤖 Generating your recipe, please wait...";
 
   axios.get(apiUrl).then(displayResponse);
 }

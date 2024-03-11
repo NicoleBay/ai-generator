@@ -9,7 +9,7 @@
 .container {
   display: block;
   margin: 60px auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 60px 60px;
 }
 
@@ -39,6 +39,12 @@ footer {
 a {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+.intruction {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .form-container {

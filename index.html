@@ -10,16 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Story Generator</title>
+    <title>AI Recipe Generator</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>AI Story Generator</h1>
+        <h1>AI Recipe Generator</h1>
       </header>
 
       <main>
         <div class="form-container">
+          <p class="intruction">
+            Enter the ingredients you have at home and your personal AI chef
+            will create a recipe for you!
+          </p>
           <form action="" id="generate-form">
             <input
               type="text"
@@ -32,9 +36,7 @@
             />
             <input type="submit" class="submit-button" />
           </form>
-          <div class="hint">
-            i.e. <em>Time-travel, cat, fantasy, witch.</em>
-          </div>
+          <div class="hint">i.e. <em>Chicken, eggs, rice, tomatoes</em></div>
           <div class="generated-response" id="generated-response"></div>
         </div>
       </main>
