@@ -44,8 +44,7 @@ a {
 }
 
 .container {
-  display: block;
-  margin: 60px auto;
+  margin: 30px auto;
   max-width: 700px;
   padding: 60px 60px;
 }
@@ -54,9 +53,11 @@ a {
   background-color: var(--bg-color);
   padding: 30px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.intruction {
+.instruction {
   font-size: 18px;
   text-align: center;
   margin-bottom: 30px;
@@ -70,7 +71,7 @@ a {
   color: var(--primary-color);
   padding: 16px;
   border: 1px solid var(--secondary-color);
-  width: 80%;
+  width: 100%;
   font-size: 16px;
   border-radius: 50px;
   line-height: 20px;
@@ -85,7 +86,7 @@ a {
   border-radius: 50px;
   padding: 14px 24px;
   font-size: 16px;
-  width: 150px;
+  width: 40%;
 }
 
 .hint {
@@ -119,5 +120,39 @@ a {
 @-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
+  }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 40px;
+  }
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .container {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .form-generation form {
+    flex-direction: column; /* Change to column layout for smaller screens */
+    align-items: center;
+  }
+
+  .search-field,
+  .submit-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .submit-button,
+  .hint {
+    margin-left: 0; /* Reset margin */
+  }
+
+  .instruction {
+    font-size: 16px;
   }
 }
